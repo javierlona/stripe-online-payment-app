@@ -31,7 +31,7 @@
       </div>
       <div class="contact">
         <h3>Please complete all fields.</h3>
-        <?php if (isset($err_msg)) { echo '<div class="error_message">'.$err_msg.'</div>'; } ?>
+        <?php echo (isset($err_msg)) ? '<div class="error_message">'.$err_msg.'</div>' : ''; ?>
         <form action="./private/charge.php" method="post" id="payment-form">
           <input type="email" name="customer_email_lonasites" class="form-control mb-3 StripeElement StripeElement--empty" title="A valid email address is required" required placeholder="Email Address" value="">
           <input type="text" name="amount_lonasites" class="form-control mb-3 StripeElement StripeElement--empty" title="Only digits and decimal points allowed" required pattern="[0-9.]+" placeholder="Enter a Dollar Amount" value="">

@@ -1,5 +1,4 @@
 <?php
-  header("location: ../index.php");
-  // header("location: /");
+  header("location: /");
   exit;
  ?>
