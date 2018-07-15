@@ -42,7 +42,7 @@
           </div>
           <!-- Used to display form errors. -->
           <div class="full" id="card-errors" role="alert"></div>
-          <button class="full" name="payment_action" type="submit" value="process_payment">Submit</button>
+          <button class="full" name="payment_action" type="submit" value="submit">Submit</button>
         </form>
       </div>
     </div>
