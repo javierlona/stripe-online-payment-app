@@ -1,0 +1,4 @@
+<Files ~ "(myscript.js)>
+  Order Deny,Allow
+  Deny from all
+</Files>
