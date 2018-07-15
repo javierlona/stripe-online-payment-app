@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="brand"><span>lona sites</span> Payment Succesful</h1>
+      <h1 class="brand">Payment Succesful</h1>
         <div class="contact-success">
           <h3>Your payment is confirmed. Please check your email for your receipt.</h3>
           <p>Your transaction ID is: <?php echo $tid; ?></p>

@@ -1,3 +1,4 @@
+<?php include "./private/charge.php" ?>
 <?php
   if(!empty($_GET['err_msg'])) :
     $GET = filter_var_array($_GET, FILTER_SANITIZE_STRING);
@@ -19,7 +20,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="brand"><span>javier's</span>Payment Form</h1>
+    <h1 class="brand">Payment Form</h1>
     <div class="wrapper animated bounceInLeft">
       <div class="company-info">
         <h3>Contact Info</h3>
@@ -32,7 +33,7 @@
       <div class="contact">
         <h3>Please complete all fields.</h3>
         <?php echo (isset($err_msg)) ? '<div class="error_message">'.$err_msg.'</div>' : ''; ?>
-        <form action="./private/charge.php" method="post" id="payment-form">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="payment-form">
           <input type="email" name="customer_email" class="form-control mb-3 StripeElement StripeElement--empty" title="A valid email address is required" required placeholder="Email Address" value="">
           <input type="text" name="amount" class="form-control mb-3 StripeElement StripeElement--empty" title="Only digits and decimal points allowed" required pattern="[0-9.]+" placeholder="Enter a Dollar Amount" value="">
           <input type="text" name="note" class="form-control mb-3 StripeElement StripeElement--empty" title="No special characters allowed" required pattern="[A-Za-z0-9. ]+" placeholder="What is the payment for?" value="">

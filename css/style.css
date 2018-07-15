@@ -1,16 +1,3 @@
-/*
- * Langdon
-================================================================================ */
-@font-face {
-  font-family: 'Langdon';
-  src:url('langdon/Langdon.ttf.woff') format('woff'),
-      url('langdon/Langdon.ttf.svg#Langdon') format('svg'),
-      url('langdon/Langdon.ttf.eot'),
-      url('langdon/Langdon.ttf.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -41,7 +28,7 @@ ul {
   color:#fff;
 }
 .brand span {
-  font-family: 'Langdon', "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #fff;
   letter-spacing: 3px;
   line-height: 1.5;

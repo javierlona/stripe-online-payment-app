@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'):
 	endif;
 
 	if(!($paymentFormsErrors)) :
-		require_once('../vendor/autoload.php');
+		require_once('./vendor/autoload.php');
 		\Stripe\Stripe::setApiKey('sk_test_tZQ88A2proEn1eoyD3YVKfG6');
 
 		$stripeToken = $post_params['stripeToken'];
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'):
 		));
 
 		// Redirect to success
-		header('Location: ./success.php?tid='.$charge->id);
+		header('Location: ./private/success.php?tid='.$charge->id);
 	else:
 		// header('Location: ../index.php?err_emailinvalid='.$err_emailinvalid.'&err_amountinvalid='.$err_amountinvalid.'&err_noteblank='.$err_noteblank);
 		$err_msg = 'Invalid data was submitted. Please try again.';
